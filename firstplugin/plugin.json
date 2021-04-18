@@ -1,0 +1,11 @@
+{
+  "Group": "yeni grup",
+  "FriendlyName": "My first plugin",
+  "SystemName": "firstplugin",
+  "Version": "1.0",
+  "SupportedVersions": [ "4.40" ],
+  "Author": "gkadirgil",
+  "DisplayOrder": 1,
+  "FileName": "firstplugin.dll",
+  "Description": "ilk plugin örneði"
+}

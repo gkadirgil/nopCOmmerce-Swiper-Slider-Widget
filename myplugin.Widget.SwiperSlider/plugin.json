@@ -1,0 +1,11 @@
+{
+  "Group": "yeni grup",
+  "FriendlyName": "Swiperjs Plugin",
+  "SystemName": "myplugin.Widget.SwiperSlider",
+  "Version": "1.0",
+  "SupportedVersions": [ "4.40" ],
+  "Author": "gkadirgil",
+  "DisplayOrder": 1,
+  "FileName": "myplugin.Widget.SwiperSlider.dll",
+  "Description": "Swiper Js Destekli Slider"
+}
