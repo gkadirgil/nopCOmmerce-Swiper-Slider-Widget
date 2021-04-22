@@ -68,14 +68,24 @@ namespace myplugin.Widget.SwiperSlider
             _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.NavigationPrevCssSelector", "Navigation Prev Css Selector");
             _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.ScrollBarCssSelector", "ScrollBar Css Selector");
             _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.Direction", "Direction");
-            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.InitialSlide","Initial Slide");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.InitialSlide", "Initial Slide");
             _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.Speed", "Speed");
             _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.Loop", "Loop");
             _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.PaginationEnabled", "Pagination Enabled");
             _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.NavigationEnabled", "Navigation Enabled");
             _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.ScrollBarEnabled", "ScrollBar Enabled");
-
-
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.LoopFillGroupWithBlankEnabled", "Loop Fill Group With Blank Enabled");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.AutoPlayEnabled", "Auto Play Enabled");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.AutoPlayDelay", "Auto Play Delay");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.AutoPlayDisableOnInteraction", "Auto Play Disable On Interaction");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.SlidesPerGroup", "Slides PerGroup");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.SpaceBetween", "Space Between");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.ng SlidesPerView", "Slides PerView");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.SlidesPerColumn", "Slides PerColumn");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.FreeModeEnabled", "Free Mode Enabled");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.PaginationClickableEnabled", "Pagination Clickable Enabled");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.DynamicBulletsEnabled", "Dynamic Bullets Enabled");
+            _localizationService.AddOrUpdateLocaleResourceAsync("myplugin.Widget.SwiperSlider.Model.CenteredSlidesEnabled", "Centered Slides Enabled");
 
 
             return base.InstallAsync();
@@ -106,11 +116,6 @@ namespace myplugin.Widget.SwiperSlider
 
 
 
-
-        //public override string GetConfigurationPageUrl()
-        //{
-        //    return base.GetConfigurationPageUrl();
-        //}
         #endregion
     }
 }

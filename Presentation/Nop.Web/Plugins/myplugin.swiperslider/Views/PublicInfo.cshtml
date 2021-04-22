@@ -4,12 +4,19 @@
     Html.AppendScriptParts("~/Plugins/myplugin.swiperslider/Content/lib/swiper/swiper-bundle.js");
     Html.AppendCssFileParts("~/Plugins/myplugin.swiperslider/Content/lib/swiper/swiper-bundle.css");
 
-    Html.AppendCssFileParts("~/Plugins/myplugin.swiperslider/Content/css/style.css");
+    //Html.AppendCssFileParts("~/Plugins/myplugin.swiperslider/Content/css/style.css");
 
 }
 
+@if (!string.IsNullOrEmpty(Model.CustomCSS))
+{
+    <style type="text/css">
+        @Model.CustomCSS
+    </style>
+}
+
 <!-- Slider main container -->
-<div class="swiper-container" style="width:600px; height:300px">
+<div class="swiper-container">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
@@ -44,48 +51,104 @@
 
 <script type="text/javascript">
     const swiper = new Swiper('@Model.ContainerCssSelector', {
-      // Optional parameters
+        // Optional parameters
         direction: '@Model.Direction.ToString().ToLower()',
         loop: @Model.Loop.ToString().ToLower(),
+        freeMode:@Model.FreeModeEnabled.ToString().ToLower(),
+         centeredSlides:@Model.CenteredSlidesEnabled.ToString().ToLower(),
+       @if(Model.Loop) {
+            <text>
+        loopFilGroupWithBlank:@Model.LoopFillGroupWithBlankEnabled.ToString().ToLower(),
+            </text>
+        }
+
         speed: @Model.Speed,
         initialSlide:@Model.InitialSlide, // initialSlide default value is 0. 0 is first slide
 
-  // If we need pagination
+        // If we need pagination
         @if(Model.PaginationEnabled) {
             <text>
-            pagination:
-                {
-                    el: '@Model.PaginationCssSelector',
-                }
+        pagination:
+        {
+            el: '@Model.PaginationCssSelector',
+
+            clickable: '@Model.PaginationClickableEnabled.ToString().ToLower()',
+
+            dynamicBullets: '@Model.DynamicBulletsEnabled.ToString().ToLower()',
+
+        }
             </text>
 
         },
 
 
-  // Navigation arrows
+        // Navigation arrows
         @if(Model.NavigationEnabled)
         {
               <text>
         navigation:
-                {
-                    nextEl: '@Model.NavigationNextCssSelector',
-                    prevEl: '@Model.NavigationPrevCssSelector',
-                }
+        {
+            nextEl: '@Model.NavigationNextCssSelector',
+            prevEl: '@Model.NavigationPrevCssSelector',
+        }
                 </text>
         },
 
 
-  // And if we need scrollbar
+        // And if we need scrollbar
 
         @if(Model.ScrollBarEnabled)
         {
             <text>
-             scrollbar:
-                {
-                    el: '@Model.ScrollBarCssSelector'
-                },
+        scrollbar:
+        {
+            el: '@Model.ScrollBarCssSelector',
+        },
             </text>
             }
-});
 
+        // AutoPlay
+             @if(Model.AutoPlayEnabled)
+                   {
+            <text>
+        autoplay:
+        {
+            delay: '@Model.AutoPlayDelay',
+            disableOnInteraction: '@Model.AutoPlayDisableOnInteraction.ToString().ToLower()',
+
+        },
+            </text>
+            }
+
+                @if(!string.IsNullOrEmpty(Model.SlidesPerView))
+                   {
+
+                       @if(Int32.TryParse(Model.SlidesPerView, out var slidePerView))
+                       {
+                           var spw = slidePerView;
+                               <text>
+                       slidesPerView: @spw,
+                       slidesPerGroup: @Model.SlidesPerGroup,
+                                   </text>
+                           }
+                           else
+                           {
+                               <text>
+                             slidesPerView: 'auto',
+                                </text>
+                             }
+
+                    }
+
+    @if(Model.SpaceBetween>0)
+            {
+                       <text>
+        spaceBetween:@Model.SpaceBetween,
+            </text>
+
+            }
+
+
+
+    });
 </script>

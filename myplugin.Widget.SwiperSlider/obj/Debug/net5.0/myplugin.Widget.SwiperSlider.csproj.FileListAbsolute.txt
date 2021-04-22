@@ -308,3 +308,5 @@ C:\Users\gkadi\source\repos\nopCommerce_4.40.3_Source\src\Presentation\Nop.Web\P
 C:\Users\gkadi\source\repos\nopCommerce_4.40.3_Source\src\Presentation\Nop.Web\Plugins\myplugin.swiperslider\SliderSettings.cs
 C:\Users\gkadi\source\repos\nopCommerce_4.40.3_Source\src\Presentation\Nop.Web\Plugins\myplugin.swiperslider\SwiperSliderPlugin.cs
 C:\Users\gkadi\source\repos\nopCommerce_4.40.3_Source\src\Presentation\Nop.Web\Plugins\myplugin.swiperslider\Views\_ViewImports.cshtml
+C:\Users\gkadi\source\repos\nopCommerce_4.40.3_Source\src\Presentation\Nop.Web\Plugins\myplugin.swiperslider\Views\_ViewStart.cshtml
+C:\Users\gkadi\source\repos\nopCommerce_4.40.3_Source\src\Presentation\Nop.Web\Plugins\myplugin.swiperslider\Views\SliderList.cshtml

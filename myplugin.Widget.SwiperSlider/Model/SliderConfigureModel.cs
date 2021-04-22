@@ -48,5 +48,44 @@ namespace myplugin.Widget.SwiperSlider.Model
 
         [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.ScrollBarEnabled")]
         public bool ScrollBarEnabled { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.LoopFillGroupWithBlankEnabled")]
+        public bool LoopFillGroupWithBlankEnabled { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.AutoPlayDelay")]
+        public int AutoPlayDelay { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.AutoPlayDisableOnInteraction")]
+        public bool AutoPlayDisableOnInteraction { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.SlidesPerGroup")]
+        public int SlidesPerGroup { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.SpaceBetween")]
+        public int SpaceBetween { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.SlidesPerView")]
+        public string SlidesPerView { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.SlidesPerColumn")]
+        public int SlidesPerColumn { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.FreeModeEnabled")]
+        public bool FreeModeEnabled { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.PaginationClickableEnabled")]
+        public bool PaginationClickableEnabled { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.DynamicBulletsEnabled")]
+        public bool DynamicBulletsEnabled { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.CenteredSlidesEnabled")]
+        public bool CenteredSlidesEnabled { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.AutoPlayDelayEnabled")]
+        public bool AutoPlayEnabled { get; set; }
+
+        [NopResourceDisplayName("myplugin.Widget.SwiperSlider.Model.CustomCSS")]
+        public string CustomCSS { get; set; }
     }
 }
